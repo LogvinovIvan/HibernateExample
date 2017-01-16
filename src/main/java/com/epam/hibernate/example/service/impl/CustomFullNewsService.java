@@ -6,9 +6,9 @@ import com.epam.lab.news.manager.repository.CommentRepository;
 import com.epam.lab.news.manager.repository.NewsRepository;
 import com.epam.lab.news.manager.repository.TagRepository;
 import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.repository.impl.OracleAuthorRepository;
-import com.epam.lab.news.manager.repository.impl.OracleCommentRepository;
-import com.epam.lab.news.manager.repository.impl.OracleTagRepository;
+import com.epam.hibernate.example.repository.impl.oracle.OracleAuthorRepository;
+import com.epam.hibernate.example.repository.impl.oracle.OracleCommentRepository;
+import com.epam.hibernate.example.repository.impl.oracle.OracleTagRepository;
 import com.epam.lab.news.manager.repository.specificaton.NewsSpecification;
 import com.epam.lab.news.manager.repository.specificaton.NewsSqlSpecification;
 import com.epam.lab.news.manager.service.FullNewsService;
@@ -22,7 +22,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.LongStream;
 
 /**
  * Created by Ivan_Lohvinau on 10/17/2016.

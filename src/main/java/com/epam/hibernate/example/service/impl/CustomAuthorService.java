@@ -1,18 +1,22 @@
-package com.epam.lab.news.manager.service.impl;
+package com.epam.hibernate.example.service.impl;
 
-import com.epam.lab.news.manager.repository.AuthorRepository;
-import com.epam.lab.news.manager.entity.Author;
-import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.service.AuthorService;
-import com.epam.lab.news.manager.exception.ServiceException;
+
+
+import com.epam.hibernate.example.entity.Author;
+import com.epam.hibernate.example.exception.RepositoryException;
+import com.epam.hibernate.example.exception.ServiceException;
+import com.epam.hibernate.example.repository.AuthorRepository;
+import com.epam.hibernate.example.service.AuthorService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by Ivan_Lohvinau on 10/14/2016.
- */
 
+
+@Service
 public class CustomAuthorService implements AuthorService {
+    @Autowired
     private AuthorRepository repository;
 
     @Override
@@ -70,6 +74,7 @@ public class CustomAuthorService implements AuthorService {
         return authors;
     }
 
+    @Autowired
     public void setRepository(AuthorRepository repository) {
         this.repository = repository;
     }

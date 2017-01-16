@@ -1,11 +1,13 @@
-package com.epam.lab.news.manager.repository.impl;
+package com.epam.hibernate.example.repository.impl.oracle;
 
-import com.epam.lab.news.manager.repository.NewsRepository;
-import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.repository.specificaton.NewsSpecification;
-import com.epam.lab.news.manager.repository.specificaton.NewsSqlSpecification;
-import com.epam.lab.news.manager.entity.News;
-import com.epam.lab.news.manager.entity.Tag;
+
+
+import com.epam.hibernate.example.entity.News;
+import com.epam.hibernate.example.entity.Tag;
+import com.epam.hibernate.example.exception.RepositoryException;
+import com.epam.hibernate.example.repository.NewsRepository;
+import com.epam.hibernate.example.repository.specificaton.NewsSpecification;
+import com.epam.hibernate.example.repository.specificaton.NewsSqlSpecification;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

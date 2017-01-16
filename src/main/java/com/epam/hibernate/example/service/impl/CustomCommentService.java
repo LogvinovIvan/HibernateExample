@@ -2,7 +2,7 @@ package com.epam.lab.news.manager.service.impl;
 
 import com.epam.lab.news.manager.entity.Comment;
 import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.repository.impl.OracleCommentRepository;
+import com.epam.hibernate.example.repository.impl.oracle.OracleCommentRepository;
 import com.epam.lab.news.manager.service.CommentService;
 import com.epam.lab.news.manager.exception.ServiceException;
 

@@ -1,7 +1,8 @@
-package com.epam.lab.news.manager.repository;
+package com.epam.hibernate.example.repository;
 
-import com.epam.lab.news.manager.entity.Tag;
-import com.epam.lab.news.manager.exception.RepositoryException;
+
+import com.epam.hibernate.example.entity.Tag;
+import com.epam.hibernate.example.exception.RepositoryException;
 
 import java.util.Set;
 

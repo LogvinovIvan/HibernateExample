@@ -1,9 +1,10 @@
-package com.epam.lab.news.manager.repository.impl;
+package com.epam.hibernate.example.repository.impl.oracle;
 
-import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.entity.Comment;
-import com.epam.lab.news.manager.entity.User;
-import com.epam.lab.news.manager.repository.CommentRepository;
+
+import com.epam.hibernate.example.entity.Comment;
+import com.epam.hibernate.example.entity.User;
+import com.epam.hibernate.example.exception.RepositoryException;
+import com.epam.hibernate.example.repository.CommentRepository;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -42,7 +43,7 @@ public class OracleCommentRepository implements CommentRepository {
             preparedStatement.setLong(1,comment.getUser().getId());
             preparedStatement.setDate(2,comment.getDate());
             preparedStatement.setString(3, comment.getText());
-            preparedStatement.setLong(4,comment.getIdNews());
+//            preparedStatement.setLong(4,comment.getIdNews());
             preparedStatement.executeUpdate();
 
             //GET generated key
@@ -69,7 +70,7 @@ public class OracleCommentRepository implements CommentRepository {
                 comment = new Comment();
                 comment.setId(id);
                 comment.setText(resultSet.getString("C_CONTENT"));
-                comment.setIdNews(resultSet.getLong("C_NEWS"));
+//                comment.setIdNews(resultSet.getLong("C_NEWS"));
                 comment.setDate(resultSet.getDate("C_DATE"));
                 User user = new User();
                 user.setId(resultSet.getLong("USER_ID_USER"));
@@ -133,7 +134,7 @@ public class OracleCommentRepository implements CommentRepository {
             ResultSet rs = statement.executeQuery();
             while(rs.next()){
                 Comment comment = new Comment();
-                comment.setIdNews(idNews);
+//                comment.setIdNews(idNews);
                 comment.setId(rs.getLong("C_ID"));
                 comment.setText(rs.getString("C_CONTENT"));
                 comment.setDate(rs.getDate("C_DATE"));

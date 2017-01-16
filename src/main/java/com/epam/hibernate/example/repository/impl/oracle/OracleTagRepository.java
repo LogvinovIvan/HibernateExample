@@ -1,8 +1,9 @@
-package com.epam.lab.news.manager.repository.impl;
+package com.epam.hibernate.example.repository.impl.oracle;
 
-import com.epam.lab.news.manager.repository.TagRepository;
-import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.entity.Tag;
+
+import com.epam.hibernate.example.entity.Tag;
+import com.epam.hibernate.example.exception.RepositoryException;
+import com.epam.hibernate.example.repository.TagRepository;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

@@ -1,7 +1,8 @@
-package com.epam.lab.news.manager.repository;
+package com.epam.hibernate.example.repository;
 
-import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.entity.User;
+
+import com.epam.hibernate.example.entity.User;
+import com.epam.hibernate.example.exception.RepositoryException;
 
 /**
  * Created by Ivan_Lohvinau on 10/13/2016.

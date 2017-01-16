@@ -1,8 +1,10 @@
-package com.epam.lab.news.manager.repository.impl;
+package com.epam.hibernate.example.repository.impl.oracle;
 
-import com.epam.lab.news.manager.repository.AuthorRepository;
-import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.entity.Author;
+
+
+import com.epam.hibernate.example.entity.Author;
+import com.epam.hibernate.example.exception.RepositoryException;
+import com.epam.hibernate.example.repository.AuthorRepository;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
