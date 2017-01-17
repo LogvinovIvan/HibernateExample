@@ -1,19 +1,20 @@
-package com.epam.lab.news.manager.service.impl;
+package com.epam.hibernate.example.service.impl;
 
-import com.epam.lab.news.manager.entity.*;
-import com.epam.lab.news.manager.repository.AuthorRepository;
-import com.epam.lab.news.manager.repository.CommentRepository;
-import com.epam.lab.news.manager.repository.NewsRepository;
-import com.epam.lab.news.manager.repository.TagRepository;
-import com.epam.lab.news.manager.exception.RepositoryException;
+
+import com.epam.hibernate.example.entity.*;
+import com.epam.hibernate.example.exception.RepositoryException;
+import com.epam.hibernate.example.exception.ServiceException;
+import com.epam.hibernate.example.repository.AuthorRepository;
+import com.epam.hibernate.example.repository.CommentRepository;
+import com.epam.hibernate.example.repository.NewsRepository;
+import com.epam.hibernate.example.repository.TagRepository;
 import com.epam.hibernate.example.repository.impl.oracle.OracleAuthorRepository;
 import com.epam.hibernate.example.repository.impl.oracle.OracleCommentRepository;
 import com.epam.hibernate.example.repository.impl.oracle.OracleTagRepository;
-import com.epam.lab.news.manager.repository.specificaton.NewsSpecification;
-import com.epam.lab.news.manager.repository.specificaton.NewsSqlSpecification;
-import com.epam.lab.news.manager.service.FullNewsService;
-import com.epam.lab.news.manager.exception.ServiceException;
-import com.epam.lab.news.manager.service.NewsService;
+import com.epam.hibernate.example.service.FullNewsService;
+import com.epam.hibernate.example.service.NewsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,10 +27,16 @@ import java.util.stream.Collectors;
 /**
  * Created by Ivan_Lohvinau on 10/17/2016.
  */
+@Service
+@Transactional
 public class CustomFullNewsService implements FullNewsService {
+    @Autowired
     private AuthorRepository authorBaseRepository;
+    @Autowired
     private NewsRepository newsBaseRepository;
+    @Autowired
     private CommentRepository commentBaseRepository;
+    @Autowired
     private TagRepository tagBaseRepository;
 
     private NewsService service;

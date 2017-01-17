@@ -1,12 +1,10 @@
-package com.epam.lab.news.manager.service;
+package com.epam.hibernate.example.service;
 
 
-import com.epam.lab.news.manager.entity.News;
-import com.epam.lab.news.manager.entity.SearchCriteria;
-import com.epam.lab.news.manager.entity.Tag;
-import com.epam.lab.news.manager.exception.ServiceException;
-import com.epam.lab.news.manager.repository.specificaton.NewsSpecification;
-import com.epam.lab.news.manager.repository.specificaton.NewsSqlSpecification;
+import com.epam.hibernate.example.entity.News;
+import com.epam.hibernate.example.entity.SearchCriteria;
+import com.epam.hibernate.example.entity.Tag;
+import com.epam.hibernate.example.exception.ServiceException;
 
 import java.util.List;
 import java.util.Set;

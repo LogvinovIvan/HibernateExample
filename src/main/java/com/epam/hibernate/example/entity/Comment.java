@@ -30,8 +30,8 @@ public class Comment {
     @JoinColumn(name = "USER_ID_USER")
     private User user;
 
-
-    @Column(name = "C_NEWS")
+    @ManyToOne
+    @JoinColumn(name = "C_NEWS")
     private FullNews news;
 
     public Long getId() {

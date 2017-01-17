@@ -1,25 +1,25 @@
-package com.epam.lab.news.manager.service.impl;
+package com.epam.hibernate.example.service.impl;
 
-import com.epam.lab.news.manager.entity.News;
-import com.epam.lab.news.manager.entity.SearchCriteria;
-import com.epam.lab.news.manager.entity.Tag;
-import com.epam.lab.news.manager.repository.NewsRepository;
-import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.repository.specificaton.NewsSpecification;
-import com.epam.lab.news.manager.repository.specificaton.NewsSqlSpecification;
-import com.epam.lab.news.manager.repository.specificaton.factory.NewsSpecificationFactory;
-import com.epam.lab.news.manager.repository.specificaton.impl.sql.NewsByTagsSpecification;
-import com.epam.lab.news.manager.repository.specificaton.impl.sql.NewsOrderByCommentSpecificaion;
-import com.epam.lab.news.manager.repository.specificaton.impl.sql.NewsOrderByDateSpecification;
-import com.epam.lab.news.manager.service.NewsService;
-import com.epam.lab.news.manager.exception.ServiceException;
+
+import com.epam.hibernate.example.entity.News;
+import com.epam.hibernate.example.entity.SearchCriteria;
+import com.epam.hibernate.example.entity.Tag;
+import com.epam.hibernate.example.exception.RepositoryException;
+import com.epam.hibernate.example.exception.ServiceException;
+import com.epam.hibernate.example.repository.NewsRepository;
+import com.epam.hibernate.example.repository.specificaton.NewsSpecification;
+import com.epam.hibernate.example.repository.specificaton.NewsSqlSpecification;
+import com.epam.hibernate.example.repository.specificaton.factory.NewsSpecificationFactory;
+import com.epam.hibernate.example.repository.specificaton.impl.sql.NewsByTagsSpecification;
+import com.epam.hibernate.example.repository.specificaton.impl.sql.NewsOrderByCommentSpecificaion;
+import com.epam.hibernate.example.repository.specificaton.impl.sql.NewsOrderByDateSpecification;
+import com.epam.hibernate.example.service.NewsService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created by Ivan_Lohvinau on 10/12/2016.
- */
+@Service
 public class CustomNewsService implements NewsService {
     private NewsRepository repository;
     private NewsSpecificationFactory factory;

@@ -3,7 +3,9 @@ package com.epam.hibernate.example.repository.impl.hibernate;
 import com.epam.hibernate.example.entity.Author;
 import com.epam.hibernate.example.exception.RepositoryException;
 import com.epam.hibernate.example.repository.AuthorRepository;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -46,6 +48,11 @@ public class HibernateAuthorRepository implements AuthorRepository {
 
     @Override
     public boolean delete(Long id) throws RepositoryException {
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        transaction.rollback();
+        session.close();
         return false;
     }
 

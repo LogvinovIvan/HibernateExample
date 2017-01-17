@@ -15,6 +15,12 @@ public class FullNews {
     @Embedded
     private News news;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "news_seq")
+    @SequenceGenerator(name = "news_seq", sequenceName = "NEWS_SEQUENCE")
+    @Column(name = "N_ID")
+    private Long id;
+
     @ManyToMany
     @JoinTable(name = "NEWS_HAS_AUTHORS",
             joinColumns = @JoinColumn(name = "NEWS_ID"),
@@ -60,6 +66,14 @@ public class FullNews {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override

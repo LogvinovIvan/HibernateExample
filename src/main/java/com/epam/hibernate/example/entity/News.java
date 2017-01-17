@@ -9,12 +9,9 @@ import java.util.Objects;
  */
 @Embeddable
 public class News {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "news_seq")
-    @SequenceGenerator(name = "news_seq", sequenceName = "NEWS_SEQUENCE")
-    @Column(name = "N_ID")
-    private Long id;
 
+    @Transient
+    private Long id;
     @Column(name = "N_MAIN_TITLE")
     private String mainTitle;
     @Column(name = "N_SHORT_TITLE")
@@ -27,13 +24,7 @@ public class News {
     private String mainPhoto;
 
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getMainTitle() {
         return mainTitle;
@@ -80,7 +71,7 @@ public class News {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         News news = (News) o;
-        return Objects.equals(id, news.id) &&
+        return
                 Objects.equals(mainTitle, news.mainTitle) &&
                 Objects.equals(shortTitle, news.shortTitle) &&
                 Objects.equals(newsText, news.newsText) &&
@@ -90,6 +81,14 @@ public class News {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, mainTitle, shortTitle, newsText, date, mainPhoto);
+        return Objects.hash(mainTitle, shortTitle, newsText, date, mainPhoto);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

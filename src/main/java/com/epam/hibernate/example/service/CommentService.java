@@ -1,7 +1,8 @@
-package com.epam.lab.news.manager.service;
+package com.epam.hibernate.example.service;
 
-import com.epam.lab.news.manager.entity.Comment;
-import com.epam.lab.news.manager.exception.ServiceException;
+
+import com.epam.hibernate.example.entity.Comment;
+import com.epam.hibernate.example.exception.ServiceException;
 
 import java.util.List;
 

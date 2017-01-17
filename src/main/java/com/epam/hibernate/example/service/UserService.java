@@ -1,7 +1,8 @@
-package com.epam.lab.news.manager.service;
+package com.epam.hibernate.example.service;
 
-import com.epam.lab.news.manager.entity.User;
-import com.epam.lab.news.manager.exception.ServiceException;
+
+import com.epam.hibernate.example.entity.User;
+import com.epam.hibernate.example.exception.ServiceException;
 
 /**
  * Created by Ivan_Lohvinau on 10/12/2016.

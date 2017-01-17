@@ -23,6 +23,12 @@
         <hibernate.version>4.3.6.Final</hibernate.version>
         <springframework.version>4.0.6.RELEASE</springframework.version>
     </properties>
+    <repositories>
+        <repository>
+            <id>codelds</id>
+            <url>https://code.lds.org/nexus/content/groups/main-repo</url>
+        </repository>
+    </repositories>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
         <dependency>

@@ -3,9 +3,9 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
+        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/com/epam/hibernate/example/config/ApplicationConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/java/com/epam/hibernate/example/config/HibernateConfig.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/com/epam/hibernate/example/config/RepositoryConfig.java</file>
         </fileset>
       </configuration>
     </facet>

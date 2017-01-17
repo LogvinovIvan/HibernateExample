@@ -1,21 +1,14 @@
-package com.epam.lab.news.manager.service.impl;
+package com.epam.hibernate.example.service.impl;
 
-import com.epam.lab.news.manager.entity.FullNews;
-import com.epam.lab.news.manager.entity.Tag;
-import com.epam.lab.news.manager.repository.Repository;
-import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.repository.TagRepository;
-import com.epam.lab.news.manager.service.TagService;
-import com.epam.lab.news.manager.exception.ServiceException;
 
-import java.util.HashSet;
+import com.epam.hibernate.example.entity.Tag;
+import com.epam.hibernate.example.exception.RepositoryException;
+import com.epam.hibernate.example.exception.ServiceException;
+import com.epam.hibernate.example.repository.Repository;
+import com.epam.hibernate.example.service.TagService;
+
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
-/**
- * Created by Ivan_Lohvinau on 10/17/2016.
- */
 public class CustomTagService implements TagService {
     private Repository<Tag, Long> repository;
 

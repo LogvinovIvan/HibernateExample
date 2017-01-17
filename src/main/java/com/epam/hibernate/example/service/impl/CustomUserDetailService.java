@@ -1,9 +1,9 @@
-package com.epam.lab.news.manager.service.impl;
+package com.epam.hibernate.example.service.impl;
 
-import com.epam.lab.news.manager.entity.User;
-import com.epam.lab.news.manager.exception.RepositoryException;
-import com.epam.lab.news.manager.repository.UserRepository;
-import com.epam.lab.news.manager.service.UserService;
+
+import com.epam.hibernate.example.entity.User;
+import com.epam.hibernate.example.exception.RepositoryException;
+import com.epam.hibernate.example.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
