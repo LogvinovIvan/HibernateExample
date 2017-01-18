@@ -20,7 +20,7 @@ import java.util.List;
 @Transactional
 public class HibernateCommentRepository implements CommentRepository {
 
-    private String SELECT_COMMENT_BY_NEWS_ID = "from COMMENT_NEWS as comments join comments.user as user where comments.C_NEWS = :id";
+    private String SELECT_COMMENT_BY_NEWS_ID = "from Comments as comments join comments.user as user where comments.news.id = :id";
 
     @Autowired
     private SessionFactory factory;

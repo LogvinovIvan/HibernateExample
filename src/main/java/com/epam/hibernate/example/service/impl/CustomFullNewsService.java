@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 /**
  * Created by Ivan_Lohvinau on 10/17/2016.
  */
-@Service
+
 @Transactional
 public class CustomFullNewsService implements FullNewsService {
     @Autowired

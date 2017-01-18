@@ -14,7 +14,7 @@ import java.util.List;
 
 
 
-@Service
+
 public class CustomAuthorService implements AuthorService {
     @Autowired
     private AuthorRepository repository;

@@ -8,7 +8,7 @@ import java.sql.Date;
 import java.util.Objects;
 
 
-@Entity
+@Entity(name = "Comments")
 @Table(name = "COMMENT_NEWS")
 public class Comment {
     @Id

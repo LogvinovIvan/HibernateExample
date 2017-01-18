@@ -16,6 +16,7 @@ public class Main {
         CommentRepository repository = context.getBean(CommentRepository.class);
         try {
             List<Comment> comments  = repository.findAllCommentsForNews(66l);
+            System.out.print(comments.size());
         } catch (RepositoryException e) {
             System.out.print(e);
         }

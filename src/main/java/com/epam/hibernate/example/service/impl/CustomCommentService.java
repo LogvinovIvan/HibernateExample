@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by Ivan_Lohvinau on 10/14/2016.
  */
-@Service
+
 @Transactional
 public class CustomCommentService implements CommentService {
 

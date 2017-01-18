@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Set;
 
-@Service
+
 public class CustomNewsService implements NewsService {
     private NewsRepository repository;
     private NewsSpecificationFactory factory;
